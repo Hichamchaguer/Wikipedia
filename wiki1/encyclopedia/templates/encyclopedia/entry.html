@@ -1,9 +1,8 @@
 {% extends "encyclopedia/layout.html" %}
-
 {% block title %}
-    {{entrytitle}}
+    {{ entryTitle }}
 {% endblock %}
 {% block body %}
-   <a href="/wiki/ {{pages}}/edit" role="button" class="btn btn-outline-secondary">Edit</a>
-   {{entry |safe}}
+    <a class="btn btn-outline-secondary" href="/wiki/{{ entryTitle }}/edit" role="button">Edit</a>    
+    {{ entry|safe }}
 {% endblock %}
